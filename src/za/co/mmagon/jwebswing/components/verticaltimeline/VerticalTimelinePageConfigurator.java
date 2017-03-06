@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -30,14 +30,14 @@ import za.co.mmagon.jwebswing.plugins.PluginInformation;
                    pluginVersion = "1.0",
                    pluginDependancyUniqueIDs = "jquery,bootstrap,modernizr",
                    pluginCategories = "ui, web, colour picker, spectrum, drop down",
-                   pluginSubtitle = "A straight forward and simple colour picker with a wide range of options and tools ",
+                   pluginSubtitle = "A straight forward and simple Responsive Vertical Timeline ",
                    pluginGitUrl = "https://codyhouse.co/gem/vertical-timeline/",
                    pluginSourceUrl = "https://github.com/GedMarc/JWebSwing-VerticalTimelineGemPlugin",
                    pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-VerticalTimelineGemPluginwiki",
                    pluginOriginalHomepage = "https://codyhouse.co/gem/vertical-timeline/",
                    pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/VerticalTimelineGemPlugin.jar/download",
                    pluginIconUrl = "bower_components/vertical-timeline-jwebswing/example.png",
-                   pluginIconImageUrl = "bower_components/vertical-timeline-jwebswing/example.jpg",
+                   pluginIconImageUrl = "bower_components/vertical-timeline-jwebswing/example.png",
                    pluginLastUpdatedDate = "2017/03/04"
 )
 public class VerticalTimelinePageConfigurator extends PageConfigurator
