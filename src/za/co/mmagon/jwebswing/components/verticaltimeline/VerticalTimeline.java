@@ -23,61 +23,62 @@ import za.co.mmagon.jwebswing.plugins.bootstrap.BootstrapPageConfigurator;
  * An implementation of the Responsive Vertical Timeline - https://codyhouse.co/gem/vertical-timeline/
  * <p>
  * <p>
+ *
  * @author Marc Magon
- * @since 24 October 2016
  * @version 1.0
+ * @since 24 October 2016
  */
 public class VerticalTimeline extends Div<VerticalTimelineChildren, VerticalTimelineAttributes, VerticalTimelineFeatures, VerticalTimelineEvents, VerticalTimeline> implements IVerticalTimeline
 {
 
-    private static final long serialVersionUID = 1L;
-    private VerticalTimelineFeature feature;
+	private static final long serialVersionUID = 1L;
+	private VerticalTimelineFeature feature;
 
-    /**
-     * Constructs a new instance of the vertical timeline
-     */
-    public VerticalTimeline()
-    {
-        addFeature(getFeature());
-        setTag("section");
-        addClass("verticalTimeline");
-        addClass("cd-container");
-        getProperties().put(BootstrapPageConfigurator.BootstrapEnabledString, "true");
-    }
+	/**
+	 * Constructs a new instance of the vertical timeline
+	 */
+	public VerticalTimeline()
+	{
+		addFeature(getFeature());
+		setTag("section");
+		addClass("verticalTimeline");
+		addClass("cd-container");
+		getProperties().put(BootstrapPageConfigurator.BootstrapEnabledString, "true");
+	}
 
-    /**
-     * Adds a time line block to this vertical time line
-     *
-     * @param block
-     */
-    @Override
-    public void add(VerticalTimelineBlock block)
-    {
-        super.add(block);
-    }
+	/**
+	 * Adds a time line block to this vertical time line
+	 *
+	 * @param block
+	 */
+	@Override
+	public void add(VerticalTimelineBlock block)
+	{
+		super.add(block);
+	}
 
-    /**
-     * Returns the vertical time line with only the fields relevant
-     *
-     * @return
-     */
-    public IVerticalTimeline asVerticalTimeline()
-    {
-        return this;
-    }
+	/**
+	 * Returns the vertical time line with only the fields relevant
+	 *
+	 * @return
+	 */
+	public IVerticalTimeline asVerticalTimeline()
+	{
+		return this;
+	}
 
-    public final VerticalTimelineFeature getFeature()
-    {
-        if (feature == null)
-        {
-            feature = new VerticalTimelineFeature(this);
-        }
-        return feature;
-    }
+	public final VerticalTimelineFeature getFeature()
+	{
+		if (feature == null)
+		{
+			feature = new VerticalTimelineFeature(this);
+		}
+		return feature;
+	}
 
-    @Override
-    public VerticalTimelineOptions getOptions()
-    {
-        return getFeature().getOptions();
-    }
+	@Override
+	public VerticalTimelineOptions getOptions()
+	{
+		return getFeature().getOptions();
+	}
 }

@@ -28,44 +28,42 @@ import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
  */
 public enum VerticalTimelineReferencePool implements ReferencePool
 {
-    VerticalTimelineReference(new JavascriptReference("ResponsiveVerticalTimeline", 1.0, "bower_components/vertical-timeline-jwebswing/js/main.js"),
-    new CSSReference("ResponsiveVerticalTimelineCSS", 1.0, "bower_components/vertical-timeline-jwebswing/css/style.css"))
-    
-    ;
-    private VerticalTimelineReferencePool()
-    {
-    } 
+	VerticalTimelineReference(new JavascriptReference("ResponsiveVerticalTimeline", 1.0, "bower_components/vertical-timeline-jwebswing/js/main.js"),
+	                          new CSSReference("ResponsiveVerticalTimelineCSS", 1.0, "bower_components/vertical-timeline-jwebswing/css/style.css"));
 
-    private JavascriptReference javaScriptReference;
-    private CSSReference cssReference;
+	private JavascriptReference javaScriptReference;
+	private CSSReference cssReference;
+	private VerticalTimelineReferencePool()
+	{
+	}
 
-    private VerticalTimelineReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
-    {
-        this.javaScriptReference = javaScriptReference;
-        this.cssReference = cssReference;
-    }
+	private VerticalTimelineReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
+	{
+		this.javaScriptReference = javaScriptReference;
+		this.cssReference = cssReference;
+	}
 
-    @Override
-    public JavascriptReference getJavaScriptReference()
-    {
-        return javaScriptReference;
-    }
+	@Override
+	public JavascriptReference getJavaScriptReference()
+	{
+		return javaScriptReference;
+	}
 
-    @Override
-    public void setJavaScriptReference(JavascriptReference javaScriptReference)
-    {
-        this.javaScriptReference = javaScriptReference;
-    }
+	@Override
+	public void setJavaScriptReference(JavascriptReference javaScriptReference)
+	{
+		this.javaScriptReference = javaScriptReference;
+	}
 
-    @Override
-    public CSSReference getCssReference()
-    {
-        return cssReference;
-    }
+	@Override
+	public CSSReference getCssReference()
+	{
+		return cssReference;
+	}
 
-    @Override
-    public void setCssReference(CSSReference cssReference)
-    {
-        this.cssReference = cssReference;
-    }
+	@Override
+	public void setCssReference(CSSReference cssReference)
+	{
+		this.cssReference = cssReference;
+	}
 }

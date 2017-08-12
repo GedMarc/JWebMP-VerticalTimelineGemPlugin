@@ -16,11 +16,7 @@
  */
 package za.co.mmagon.jwebswing.components.verticaltimeline;
 
-import za.co.mmagon.jwebswing.base.html.Div;
-import za.co.mmagon.jwebswing.base.html.H2;
-import za.co.mmagon.jwebswing.base.html.Link;
-import za.co.mmagon.jwebswing.base.html.Paragraph;
-import za.co.mmagon.jwebswing.base.html.Span;
+import za.co.mmagon.jwebswing.base.html.*;
 import za.co.mmagon.jwebswing.base.html.attributes.NoAttributes;
 import za.co.mmagon.jwebswing.base.html.interfaces.GlobalChildren;
 import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
@@ -28,167 +24,177 @@ import za.co.mmagon.jwebswing.base.html.interfaces.events.GlobalEvents;
 
 /**
  * A content div for the vertical Timeline
+ *
  * @author GedMarc
  * @since Oct 24, 2016
- * 
  */
 public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, VerticalTimelineContent> implements IVerticalTimelineContent
 {
-    /**
-     * The header of the time-line block
-     */
-    private H2 header;
-    /**
-     * The actual text for the block
-     */
-    private Paragraph text;
-    /**
-     * The link for the read more text
-     */
-    private Link readMoreLink;
-    /**
-     * A span showing the date of the occurance
-     */
-    private Span spanText;
-    
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
+	/**
+	 * The header of the time-line block
+	 */
+	private H2 header;
+	/**
+	 * The actual text for the block
+	 */
+	private Paragraph text;
+	/**
+	 * The link for the read more text
+	 */
+	private Link readMoreLink;
+	/**
+	 * A span showing the date of the occurance
+	 */
+	private Span spanText;
 
-    public VerticalTimelineContent()
-    {
-        addClass("cd-timeline-content");
-    }
-    
-    /**
-     * Returns the vertical time-line content as only a content
-     * @return 
-     */
-    public IVerticalTimelineContent asVerticalTimelineContent()
-    {
-        return this;
-    }
+	public VerticalTimelineContent()
+	{
+		addClass("cd-timeline-content");
+	}
 
-    @Override
-    public void preConfigure()
-    {
-        if(!isConfigured())
-        {
-            add(getHeader());
-            add(getText());
-            add(getReadMoreLink());
-            add(getSpanText());
-        }
-        super.preConfigure();
-    }
-    
-    /**
-     * Returns the header object
-     * @return 
-     */
-    @Override
-    public H2 getHeader()
-    {
-        if(this.header == null)
-        {
-            setHeader(new H2(""));
-        }
-        return header;
-    }
+	/**
+	 * Returns the vertical time-line content as only a content
+	 *
+	 * @return
+	 */
+	public IVerticalTimelineContent asVerticalTimelineContent()
+	{
+		return this;
+	}
 
-    /**
-     * Sets the header object
-     * @param header 
-     */
-    @Override
-    public void setHeader(H2 header)
-    {
-        this.header = header;
-    }
+	@Override
+	public void preConfigure()
+	{
+		if (!isConfigured())
+		{
+			add(getHeader());
+			add(getText());
+			add(getReadMoreLink());
+			add(getSpanText());
+		}
+		super.preConfigure();
+	}
 
-    /**
-     * Returns the text object 
-     * @return 
-     */
-    @Override
-    public Paragraph getText()
-    {
-        return text;
-    }
+	/**
+	 * Returns the header object
+	 *
+	 * @return
+	 */
+	@Override
+	public H2 getHeader()
+	{
+		if (this.header == null)
+		{
+			setHeader(new H2(""));
+		}
+		return header;
+	}
 
-    /**
-     * Sets the text object
-     * @param text 
-     */
-    @Override
-    public void setText(Paragraph text)
-    {
-        this.text = text;
-    }
+	/**
+	 * Sets the header object
+	 *
+	 * @param header
+	 */
+	@Override
+	public void setHeader(H2 header)
+	{
+		this.header = header;
+	}
 
-    /**
-     * Changes the default action of set text to the correct way for the time-line
-     * @param text the text to apply
-     * @return this
-     */
-    @Override
-    public VerticalTimelineContent setText(String text)
-    {
-        setText(new Paragraph(text));
-        return this;
-    }
-    
-    /**
-     * The link for the read more
-     * @return 
-     */
-    @Override
-    public Link getReadMoreLink()
-    {
-        if(readMoreLink == null)
-        {
-            setReadMoreLink(new Link());
-        }
-        return readMoreLink;
-    }
+	/**
+	 * Returns the text object
+	 *
+	 * @return
+	 */
+	@Override
+	public Paragraph getText()
+	{
+		return text;
+	}
 
-    /**
-     * Sets the read more link
-     * @param readMoreLink 
-     */
-    @Override
-    public void setReadMoreLink(Link readMoreLink)
-    {
-        this.readMoreLink = readMoreLink;
-        if(this.readMoreLink != null)
-        {
-            this.readMoreLink.addClass("cd-read-more");
-        }
-    }
+	/**
+	 * Changes the default action of set text to the correct way for the time-line
+	 *
+	 * @param text the text to apply
+	 *
+	 * @return this
+	 */
+	@Override
+	public VerticalTimelineContent setText(String text)
+	{
+		setText(new Paragraph(text));
+		return this;
+	}
 
-    /**
-     * Gets the span for where the date displays
-     * @return 
-     */
-    @Override
-    public Span getSpanText()
-    {
-        if(spanText == null)
-        {
-            setSpanText(new Span());
-        }
-        return spanText;
-    }
+	/**
+	 * Sets the text object
+	 *
+	 * @param text
+	 */
+	@Override
+	public void setText(Paragraph text)
+	{
+		this.text = text;
+	}
 
-    /**
-     * Sets the span for where the date displays
-     * @param spanText 
-     */
-    @Override
-    public void setSpanText(Span spanText)
-    {
-        this.spanText = spanText;
-        if(this.spanText != null)
-        {
-            this.spanText.addClass("cd-date");
-        }
-    }
+	/**
+	 * The link for the read more
+	 *
+	 * @return
+	 */
+	@Override
+	public Link getReadMoreLink()
+	{
+		if (readMoreLink == null)
+		{
+			setReadMoreLink(new Link());
+		}
+		return readMoreLink;
+	}
+
+	/**
+	 * Sets the read more link
+	 *
+	 * @param readMoreLink
+	 */
+	@Override
+	public void setReadMoreLink(Link readMoreLink)
+	{
+		this.readMoreLink = readMoreLink;
+		if (this.readMoreLink != null)
+		{
+			this.readMoreLink.addClass("cd-read-more");
+		}
+	}
+
+	/**
+	 * Gets the span for where the date displays
+	 *
+	 * @return
+	 */
+	@Override
+	public Span getSpanText()
+	{
+		if (spanText == null)
+		{
+			setSpanText(new Span());
+		}
+		return spanText;
+	}
+
+	/**
+	 * Sets the span for where the date displays
+	 *
+	 * @param spanText
+	 */
+	@Override
+	public void setSpanText(Span spanText)
+	{
+		this.spanText = spanText;
+		if (this.spanText != null)
+		{
+			this.spanText.addClass("cd-date");
+		}
+	}
 }

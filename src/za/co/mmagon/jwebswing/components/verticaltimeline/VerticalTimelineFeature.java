@@ -24,46 +24,48 @@ import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
  * Adds on a ToolTip, String for custom text using header theme, Div for custom contents
  *
  * @author MMagon
- * @since 2013/01/16
  * @version 1.0
+ * @since 2013/01/16
  */
 public class VerticalTimelineFeature extends Feature<VerticalTimelineOptions, VerticalTimelineFeature> implements VerticalTimelineFeatures, GlobalFeatures
 {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    private VerticalTimelineOptions options;
+	private VerticalTimelineOptions options;
 
-    /**
-     * Constructs a new Tooltip ComponentFeatureBase for a component. Adds the tooltip text as the Title attribute to the component
-     * <p>
-     * @param forComponent
-     */
-    public VerticalTimelineFeature(Component forComponent)
-    {
-        super("VerticalTimelineFeature");
-        setComponent(forComponent);
-        getJavascriptReferences().add(VerticalTimelineReferencePool.VerticalTimelineReference.getJavaScriptReference());
-        getCssReferences().add(VerticalTimelineReferencePool.VerticalTimelineReference.getCssReference());
-    }
+	/**
+	 * Constructs a new Tooltip ComponentFeatureBase for a component. Adds the tooltip text as the Title attribute to the component
+	 * <p>
+	 *
+	 * @param forComponent
+	 */
+	public VerticalTimelineFeature(Component forComponent)
+	{
+		super("VerticalTimelineFeature");
+		setComponent(forComponent);
+		getJavascriptReferences().add(VerticalTimelineReferencePool.VerticalTimelineReference.getJavaScriptReference());
+		getCssReferences().add(VerticalTimelineReferencePool.VerticalTimelineReference.getCssReference());
+	}
 
-    /**
-     * Returns all the tooltip options
-     * <p>
-     * @return
-     */
-    @Override
-    public VerticalTimelineOptions getOptions()
-    {
-        if (options == null)
-        {
-            options = new VerticalTimelineOptions();
-        }
-        return options;
-    }
+	/**
+	 * Returns all the tooltip options
+	 * <p>
+	 *
+	 * @return
+	 */
+	@Override
+	public VerticalTimelineOptions getOptions()
+	{
+		if (options == null)
+		{
+			options = new VerticalTimelineOptions();
+		}
+		return options;
+	}
 
-    @Override
-    public void assignFunctionsToComponent()
-    {
-    }
+	@Override
+	public void assignFunctionsToComponent()
+	{
+	}
 }

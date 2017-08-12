@@ -28,135 +28,137 @@ import za.co.mmagon.jwebswing.base.html.interfaces.events.GlobalEvents;
  *
  * @author GedMarc
  * @since Oct 24, 2016
- *
  */
-public class VerticalTimelineBlock extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, VerticalTimelineBlock> 
-        implements VerticalTimelineChildren, IVerticalTimelineBlock
+public class VerticalTimelineBlock extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, VerticalTimelineBlock>
+		implements VerticalTimelineChildren, IVerticalTimelineBlock
 {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * The component that will display the image
-     */
-    private Component imageComponent;
+	/**
+	 * The component that will display the image
+	 */
+	private Component imageComponent;
 
-    /**
-     * The content block for the time-line
-     */
-    private VerticalTimelineContent content;
-    
-    /**
-     * The div that contains the image container
-     */
-    private Div imageContainer;
+	/**
+	 * The content block for the time-line
+	 */
+	private VerticalTimelineContent content;
 
-    /**
-     * Constructs a new instance of the vertical time-line block
-     */
-    public VerticalTimelineBlock()
-    {
-        addClass("cd-timeline-block");
-    }
+	/**
+	 * The div that contains the image container
+	 */
+	private Div imageContainer;
 
-    /**
-     * Constructs a new time-line block with the given image component
-     * @param imageComponent The image to use in the middle
-     */
-    public VerticalTimelineBlock(Component imageComponent)
-    {
-        this();
-        setImageComponent(imageComponent);
-    }
-   
-    /**
-     * Returns this image component. 
-     * May return null
-     *
-     * @return
-     */
-    @Override
-    public Component getImageComponent()
-    {
-        return imageComponent;
-    }
+	/**
+	 * Constructs a new instance of the vertical time-line block
+	 */
+	public VerticalTimelineBlock()
+	{
+		addClass("cd-timeline-block");
+	}
 
-    /**
-     * Sets this image component
-     *
-     * @param imageComponent
-     */
-    @Override
-    public final void setImageComponent(Component imageComponent)
-    {
-        this.imageComponent = imageComponent;
-        if(this.imageComponent != null)
-        {
-            
-        }
-    }
+	/**
+	 * Constructs a new time-line block with the given image component
+	 *
+	 * @param imageComponent The image to use in the middle
+	 */
+	public VerticalTimelineBlock(Component imageComponent)
+	{
+		this();
+		setImageComponent(imageComponent);
+	}
 
-    /**
-     * Returns the content div. Never null
-     *
-     * @return
-     */
-    @Override
-    public VerticalTimelineContent getContent()
-    {
-        if (content == null)
-        {
-            setContent(new VerticalTimelineContent());
-        }
-        return content;
-    }
+	/**
+	 * Returns this image component.
+	 * May return null
+	 *
+	 * @return
+	 */
+	@Override
+	public Component getImageComponent()
+	{
+		return imageComponent;
+	}
 
-    /**
-     * Sets the content div
-     *
-     * @param content
-     */
-    @Override
-    public void setContent(VerticalTimelineContent content)
-    {
-        remove(this.content);
-        this.content = content;
-        if(this.content != null)
-        {
-            add(this.content);
-        }
-    }
+	/**
+	 * Sets this image component
+	 *
+	 * @param imageComponent
+	 */
+	@Override
+	public final void setImageComponent(Component imageComponent)
+	{
+		this.imageComponent = imageComponent;
+		if (this.imageComponent != null)
+		{
 
-    /**
-     * Gets the image container. Never null
-     * @return 
-     */
-    @Override
-    public Div getImageContainer()
-    {
-        if(imageContainer == null)
-        {
-            setImageContainer(new Div());
-        }
-        return imageContainer;
-    }
+		}
+	}
 
-    /**
-     * Sets the image container
-     * @param imageContainer 
-     */
-    @Override
-    public void setImageContainer(Div imageContainer)
-    {
-        remove(this.imageContainer);
-        this.imageContainer = imageContainer;
-        if(imageContainer != null)
-        {
-            imageContainer.addClass("cd-timeline-img");
+	/**
+	 * Returns the content div. Never null
+	 *
+	 * @return
+	 */
+	@Override
+	public VerticalTimelineContent getContent()
+	{
+		if (content == null)
+		{
+			setContent(new VerticalTimelineContent());
+		}
+		return content;
+	}
+
+	/**
+	 * Sets the content div
+	 *
+	 * @param content
+	 */
+	@Override
+	public void setContent(VerticalTimelineContent content)
+	{
+		remove(this.content);
+		this.content = content;
+		if (this.content != null)
+		{
+			add(this.content);
+		}
+	}
+
+	/**
+	 * Gets the image container. Never null
+	 *
+	 * @return
+	 */
+	@Override
+	public Div getImageContainer()
+	{
+		if (imageContainer == null)
+		{
+			setImageContainer(new Div());
+		}
+		return imageContainer;
+	}
+
+	/**
+	 * Sets the image container
+	 *
+	 * @param imageContainer
+	 */
+	@Override
+	public void setImageContainer(Div imageContainer)
+	{
+		remove(this.imageContainer);
+		this.imageContainer = imageContainer;
+		if (imageContainer != null)
+		{
+			imageContainer.addClass("cd-timeline-img");
 //            imageContainer.addAttribute(GlobalAttributes.Style, "align-content: center;width: 60px;height: 60px;text-align: center;line-height: 60px;");
-            add(0,this.imageContainer);
-        }
-    }
-    
-    
+			add(0, this.imageContainer);
+		}
+	}
+
+
 }

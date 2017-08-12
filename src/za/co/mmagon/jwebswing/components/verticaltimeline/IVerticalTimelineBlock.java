@@ -20,53 +20,53 @@ import za.co.mmagon.jwebswing.Component;
 import za.co.mmagon.jwebswing.base.html.Div;
 
 /**
- *
  * @author GedMarc
  * @since Oct 24, 2016
- * 
  */
-public interface IVerticalTimelineBlock 
+public interface IVerticalTimelineBlock
 {
 
-    /**
-     * Returns the content div. Never null
-     *
-     * @return
-     */
-    VerticalTimelineContent getContent();
+	/**
+	 * Returns the content div. Never null
+	 *
+	 * @return
+	 */
+	VerticalTimelineContent getContent();
 
-    /**
-     * Returns this image component.
-     * May return null
-     *
-     * @return
-     */
-    Component getImageComponent();
+	/**
+	 * Sets the content div
+	 *
+	 * @param content
+	 */
+	void setContent(VerticalTimelineContent content);
 
-    /**
-     * Gets the image container. Never null
-     * @return
-     */
-    Div getImageContainer();
+	/**
+	 * Returns this image component.
+	 * May return null
+	 *
+	 * @return
+	 */
+	Component getImageComponent();
 
-    /**
-     * Sets the content div
-     *
-     * @param content
-     */
-    void setContent(VerticalTimelineContent content);
+	/**
+	 * Sets this image component
+	 *
+	 * @param imageComponent
+	 */
+	void setImageComponent(Component imageComponent);
 
-    /**
-     * Sets this image component
-     *
-     * @param imageComponent
-     */
-    void setImageComponent(Component imageComponent);
+	/**
+	 * Gets the image container. Never null
+	 *
+	 * @return
+	 */
+	Div getImageContainer();
 
-    /**
-     * Sets the image container
-     * @param imageContainer
-     */
-    void setImageContainer(Div imageContainer);
+	/**
+	 * Sets the image container
+	 *
+	 * @param imageContainer
+	 */
+	void setImageContainer(Div imageContainer);
 
 }

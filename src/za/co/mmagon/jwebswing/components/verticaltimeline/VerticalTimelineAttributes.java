@@ -19,38 +19,37 @@ package za.co.mmagon.jwebswing.components.verticaltimeline;
 import za.co.mmagon.jwebswing.base.html.interfaces.AttributeDefinitions;
 
 /**
- *
  * @author GedMarc
  */
 public enum VerticalTimelineAttributes implements AttributeDefinitions
 {
-    Visibility;
+	Visibility;
 
-    private VerticalTimelineAttributes()
-    {
-    }
+	private boolean isKeyword;
 
-    private VerticalTimelineAttributes(boolean isKeyword)
-    {
-        this.isKeyword = isKeyword;
-    }
+	private VerticalTimelineAttributes()
+	{
+	}
 
-    private boolean isKeyword;
+	private VerticalTimelineAttributes(boolean isKeyword)
+	{
+		this.isKeyword = isKeyword;
+	}
 
-    @Override
-    public boolean isKeyword()
-    {
-        return isKeyword;
-    }
+	@Override
+	public boolean isKeyword()
+	{
+		return isKeyword;
+	}
 
-    /**
-     * Returns the attribute name replacing all underscores with dashes and all dollar signs to empty
-     *
-     * @return
-     */
-    @Override
-    public String toString()
-    {
-        return name().toLowerCase().replace('_', '-').replace("$", "");
-    }
+	/**
+	 * Returns the attribute name replacing all underscores with dashes and all dollar signs to empty
+	 *
+	 * @return
+	 */
+	@Override
+	public String toString()
+	{
+		return name().toLowerCase().replace('_', '-').replace("$", "");
+	}
 }

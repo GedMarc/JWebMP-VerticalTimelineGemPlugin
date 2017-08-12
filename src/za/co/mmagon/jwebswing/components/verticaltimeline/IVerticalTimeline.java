@@ -17,18 +17,17 @@
 package za.co.mmagon.jwebswing.components.verticaltimeline;
 
 /**
- *
  * @author GedMarc
  * @since Oct 24, 2016
- * 
  */
-public interface IVerticalTimeline 
+public interface IVerticalTimeline
 {
 
-    /**
-     * Adds a time line block to this vertical time line
-     * @param block
-     */
-    void add(VerticalTimelineBlock block);
+	/**
+	 * Adds a time line block to this vertical time line
+	 *
+	 * @param block
+	 */
+	void add(VerticalTimelineBlock block);
 
 }

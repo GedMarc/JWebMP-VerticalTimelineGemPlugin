@@ -17,6 +17,6 @@
     "tests"
   ],
   "dependencies": {
-	"vertical-timeline-jwebswing": "*"
+    "vertical-timeline-jwebswing": "*"
   }
 }
