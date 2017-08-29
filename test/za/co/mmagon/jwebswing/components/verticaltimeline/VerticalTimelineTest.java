@@ -28,11 +28,11 @@ import za.co.mmagon.jwebswing.base.html.Span;
  */
 public class VerticalTimelineTest extends BaseTestClass
 {
-
+	
 	public VerticalTimelineTest()
 	{
 	}
-
+	
 	@Test
 	public void testBasicStructure()
 	{
@@ -40,7 +40,7 @@ public class VerticalTimelineTest extends BaseTestClass
 		System.out.println(vt.toString(true));
 		Assert.assertEquals("<section class=\"verticalTimeline cd-container\" id=\"id\"></section>", vt.toString(true));
 	}
-
+	
 	@Test
 	public void testDeepStructure()
 	{
@@ -51,7 +51,7 @@ public class VerticalTimelineTest extends BaseTestClass
 		vtb.getContent().setHeader(new H2("header text"));
 		vtb.getContent().setText("paragraph text");
 		vtb.getContent().setSpanText(new Span("span text"));
-
+		
 		vtb.setID("vtbId");
 		vtb.getContent().getHeader().setID("headerID");
 		vtb.getContent().asVerticalTimelineContent().getReadMoreLink().setID("readmoreID");
@@ -59,13 +59,14 @@ public class VerticalTimelineTest extends BaseTestClass
 		vtb.getContent().asVerticalTimelineContent().getHeader().setID("headerID");
 		vtb.getContent().asVerticalTimelineContent().getText().setID("textID");
 		vt.add(vtb);
-
+		
 		System.out.println(vt.toString(true));
 		Assert.assertEquals("<section class=\"verticalTimeline cd-container\" id=\"id\">\n"
 				                    + "	<div class=\"cd-timeline-block\" id=\"vtbId\">\n"
-				                    + "		<div class=\"cd-timeline-img\" id=\"vtbImageID\">\n"
-				                    + "			<i class=\"fa fa-cog\"></i>\n"
-				                    + "		</div>\n"
+//				                    + "		<div class=\"cd-timeline-img\" id=\"vtbImageID\">\n"
+//				                    + "			<i class=\"fa fa-cog\"></i>\n"
+//				                    + "		</div>\n"
+				                    + "		<div class=\"cd-timeline-img\" id=\"vtbImageID\"></div>\n"
 				                    + "		<div class=\"cd-timeline-content\" id=\"content\">\n"
 				                    + "			<h2 id=\"headerID\">header text</h2>\n"
 				                    + "			<p id=\"textID\">paragraph text</p>\n"
@@ -75,12 +76,12 @@ public class VerticalTimelineTest extends BaseTestClass
 				                    + "	</div>\n"
 				                    + "</section>", vt.toString(true));
 	}
-
+	
 	@Test
 	public void testReferences()
 	{
 		Page p = getInstance();
-
+		
 		VerticalTimeline vt = getMe();
 		VerticalTimelineBlock vtb = new VerticalTimelineBlock();
 		vtb.getImageContainer().setID("vtbImageID");
@@ -88,7 +89,7 @@ public class VerticalTimelineTest extends BaseTestClass
 		vtb.getContent().setHeader(new H2("header text"));
 		vtb.getContent().setText("paragraph text");
 		vtb.getContent().setSpanText(new Span("span text"));
-
+		
 		vtb.setID("vtbId");
 		vtb.getContent().getHeader().setID("headerID");
 		vtb.getContent().asVerticalTimelineContent().getReadMoreLink().setID("readmoreID");
@@ -96,11 +97,11 @@ public class VerticalTimelineTest extends BaseTestClass
 		vtb.getContent().asVerticalTimelineContent().getHeader().setID("headerID");
 		vtb.getContent().asVerticalTimelineContent().getText().setID("textID");
 		vt.add(vtb);
-
+		
 		p.getBody().add(vt);
-
+		
 		System.out.println(p.toString(true));
-
+		
 		Assert.assertEquals("<!DOCTYPE html>\n"
 				                    + "<html>\n"
 				                    + "	<head>\n"
@@ -115,9 +116,9 @@ public class VerticalTimelineTest extends BaseTestClass
 				                    + "	<body id=\"body\">\n"
 				                    + "		<section class=\"verticalTimeline cd-container\" id=\"id\">\n"
 				                    + "			<div class=\"cd-timeline-block\" id=\"vtbId\">\n"
-				                    + "				<div class=\"cd-timeline-img\" id=\"vtbImageID\">\n"
-				                    + "					<i class=\"fa fa-cog\"></i>\n"
-				                    + "				</div>\n"
+//				                    + "				<div class=\"cd-timeline-img\" id=\"vtbImageID\">\n"
+//				                    + "					<i class=\"fa fa-cog\"></i>\n"
+//				                    + "				</div>\n"
 				                    + "				<div class=\"cd-timeline-content\" id=\"content\">\n"
 				                    + "					<h2 id=\"headerID\">header text</h2>\n"
 				                    + "					<p id=\"textID\">paragraph text</p>\n"
@@ -133,14 +134,14 @@ public class VerticalTimelineTest extends BaseTestClass
 				                    + "		<script src=\"bower_components/vertical-timeline-jwebswing/js/main.js\" type=\"text/javascript\"></script>\n"
 				                    + "	</body>\n"
 				                    + "</html>", p.toString(true));
-
+		
 	}
-
+	
 	public VerticalTimeline getMe()
 	{
 		VerticalTimeline vt = new VerticalTimeline();
 		vt.setID("id");
 		return vt;
 	}
-
+	
 }
