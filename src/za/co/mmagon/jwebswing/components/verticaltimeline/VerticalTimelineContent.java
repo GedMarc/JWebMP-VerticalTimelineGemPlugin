@@ -44,7 +44,7 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 	 */
 	private Link readMoreLink;
 	/**
-	 * A span showing the date of the occurance
+	 * A span showing the date of the occurrence
 	 */
 	private Span spanText;
 
