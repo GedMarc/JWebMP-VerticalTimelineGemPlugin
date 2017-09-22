@@ -33,11 +33,12 @@ public enum VerticalTimelineReferencePool implements ReferencePool
 
 	private JavascriptReference javaScriptReference;
 	private CSSReference cssReference;
-	private VerticalTimelineReferencePool()
+	
+	VerticalTimelineReferencePool()
 	{
 	}
-
-	private VerticalTimelineReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
+	
+	VerticalTimelineReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
 	{
 		this.javaScriptReference = javaScriptReference;
 		this.cssReference = cssReference;

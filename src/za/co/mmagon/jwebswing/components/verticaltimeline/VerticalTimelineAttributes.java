@@ -24,24 +24,24 @@ import za.co.mmagon.jwebswing.base.html.interfaces.AttributeDefinitions;
 public enum VerticalTimelineAttributes implements AttributeDefinitions
 {
 	Visibility;
-
+	
 	private boolean isKeyword;
-
-	private VerticalTimelineAttributes()
+	
+	VerticalTimelineAttributes()
 	{
 	}
-
-	private VerticalTimelineAttributes(boolean isKeyword)
+	
+	VerticalTimelineAttributes(boolean isKeyword)
 	{
 		this.isKeyword = isKeyword;
 	}
-
+	
 	@Override
 	public boolean isKeyword()
 	{
 		return isKeyword;
 	}
-
+	
 	/**
 	 * Returns the attribute name replacing all underscores with dashes and all dollar signs to empty
 	 *
