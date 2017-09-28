@@ -16,8 +16,8 @@
  */
 package za.co.mmagon.jwebswing.components.verticaltimeline;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import za.co.mmagon.BaseTestClass;
 import za.co.mmagon.jwebswing.Page;
 import za.co.mmagon.jwebswing.base.html.H2;
@@ -38,7 +38,7 @@ public class VerticalTimelineTest extends BaseTestClass
 	{
 		VerticalTimeline vt = getMe();
 		System.out.println(vt.toString(true));
-		Assert.assertEquals("<section class=\"verticalTimeline cd-container\" id=\"id\"></section>", vt.toString(true));
+		Assertions.assertEquals("<section class=\"verticalTimeline cd-container\" id=\"id\"></section>", vt.toString(true));
 	}
 	
 	@Test
@@ -61,7 +61,7 @@ public class VerticalTimelineTest extends BaseTestClass
 		vt.add(vtb);
 		
 		System.out.println(vt.toString(true));
-		Assert.assertEquals("<section class=\"verticalTimeline cd-container\" id=\"id\">\n"
+		Assertions.assertEquals("<section class=\"verticalTimeline cd-container\" id=\"id\">\n"
 				                    + "	<div class=\"cd-timeline-block\" id=\"vtbId\">\n"
 //				                    + "		<div class=\"cd-timeline-img\" id=\"vtbImageID\">\n"
 //				                    + "			<i class=\"fa fa-cog\"></i>\n"
@@ -102,7 +102,7 @@ public class VerticalTimelineTest extends BaseTestClass
 		
 		System.out.println(p.toString(true));
 		
-		Assert.assertEquals("<!DOCTYPE html>\n"
+		Assertions.assertEquals("<!DOCTYPE html>\n"
 				                    + "<html>\n"
 				                    + "	<head>\n"
 				                    + "		<meta charset=\"utf-16\">\n"
