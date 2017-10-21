@@ -20,6 +20,7 @@ package za.co.mmagon.jwebswing.components.verticaltimeline;
  * @author GedMarc
  * @since Oct 24, 2016
  */
+@FunctionalInterface
 public interface IVerticalTimeline
 {
 
