@@ -61,7 +61,8 @@ public class VerticalTimelineBlock extends Div<GlobalChildren, NoAttributes, Glo
 	/**
 	 * Constructs a new time-line block with the given image component
 	 *
-	 * @param imageComponent The image to use in the middle
+	 * @param imageComponent
+	 * 		The image to use in the middle
 	 */
 	public VerticalTimelineBlock(Component imageComponent)
 	{
@@ -90,10 +91,6 @@ public class VerticalTimelineBlock extends Div<GlobalChildren, NoAttributes, Glo
 	public final void setImageComponent(Component imageComponent)
 	{
 		this.imageComponent = imageComponent;
-		if (this.imageComponent != null)
-		{
-
-		}
 	}
 
 	/**
@@ -155,10 +152,46 @@ public class VerticalTimelineBlock extends Div<GlobalChildren, NoAttributes, Glo
 		if (imageContainer != null)
 		{
 			imageContainer.addClass("cd-timeline-img");
-//            imageContainer.addAttribute(GlobalAttributes.Style, "align-content: center;width: 60px;height: 60px;text-align: center;line-height: 60px;");
 			add(0, this.imageContainer);
 		}
 	}
 
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof VerticalTimelineBlock))
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
 
+		VerticalTimelineBlock that = (VerticalTimelineBlock) o;
+
+		if (!getImageComponent().equals(that.getImageComponent()))
+		{
+			return false;
+		}
+		if (!getContent().equals(that.getContent()))
+		{
+			return false;
+		}
+		return getImageContainer().equals(that.getImageContainer());
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + getImageComponent().hashCode();
+		result = 31 * result + getContent().hashCode();
+		result = 31 * result + getImageContainer().hashCode();
+		return result;
+	}
 }

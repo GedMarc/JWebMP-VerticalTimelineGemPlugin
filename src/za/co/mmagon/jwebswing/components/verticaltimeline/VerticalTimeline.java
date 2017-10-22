@@ -28,7 +28,7 @@ import za.co.mmagon.jwebswing.plugins.bootstrap.BootstrapPageConfigurator;
  * @version 1.0
  * @since 24 October 2016
  */
-public class VerticalTimeline extends Div<VerticalTimelineChildren, VerticalTimelineAttributes, VerticalTimelineFeatures, VerticalTimelineEvents, VerticalTimeline> implements IVerticalTimeline
+public class VerticalTimeline extends Div<VerticalTimelineChildren, VerticalTimelineAttributes, VerticalTimelineFeatures, VerticalTimelineEvents, VerticalTimeline>
 {
 
 	private static final long serialVersionUID = 1L;
@@ -47,22 +47,11 @@ public class VerticalTimeline extends Div<VerticalTimelineChildren, VerticalTime
 	}
 
 	/**
-	 * Adds a time line block to this vertical time line
-	 *
-	 * @param block
-	 */
-	@Override
-	public void add(VerticalTimelineBlock block)
-	{
-		super.add(block);
-	}
-
-	/**
 	 * Returns the vertical time line with only the fields relevant
 	 *
 	 * @return
 	 */
-	public IVerticalTimeline asVerticalTimeline()
+	public VerticalTimeline asVerticalTimeline()
 	{
 		return this;
 	}
@@ -80,5 +69,34 @@ public class VerticalTimeline extends Div<VerticalTimelineChildren, VerticalTime
 	public VerticalTimelineOptions getOptions()
 	{
 		return getFeature().getOptions();
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof VerticalTimeline))
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+
+		VerticalTimeline that = (VerticalTimeline) o;
+
+		return getFeature().equals(that.getFeature());
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + getFeature().hashCode();
+		return result;
 	}
 }

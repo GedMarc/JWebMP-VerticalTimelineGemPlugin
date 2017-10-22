@@ -47,12 +47,12 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 	 * A span showing the date of the occurrence
 	 */
 	private Span spanText;
-	
+
 	public VerticalTimelineContent()
 	{
 		addClass("cd-timeline-content");
 	}
-	
+
 	/**
 	 * Returns the vertical time-line content as only a content
 	 *
@@ -62,7 +62,7 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 	{
 		return this;
 	}
-	
+
 	@Override
 	public void preConfigure()
 	{
@@ -75,7 +75,7 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 		}
 		super.preConfigure();
 	}
-	
+
 	/**
 	 * Returns the header object
 	 *
@@ -90,7 +90,7 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 		}
 		return header;
 	}
-	
+
 	/**
 	 * Sets the header object
 	 *
@@ -101,7 +101,7 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 	{
 		this.header = header;
 	}
-	
+
 	/**
 	 * Returns the text object
 	 *
@@ -112,7 +112,7 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 	{
 		return text;
 	}
-	
+
 	/**
 	 * Sets the text object
 	 *
@@ -123,11 +123,12 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 	{
 		this.text = text;
 	}
-	
+
 	/**
 	 * Changes the default action of set text to the correct way for the time-line
 	 *
-	 * @param text the text to apply
+	 * @param text
+	 * 		the text to apply
 	 *
 	 * @return this
 	 */
@@ -137,7 +138,7 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 		setText(new Paragraph(text));
 		return this;
 	}
-	
+
 	/**
 	 * The link for the read more
 	 *
@@ -152,7 +153,7 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 		}
 		return readMoreLink;
 	}
-	
+
 	/**
 	 * Sets the read more link
 	 *
@@ -167,7 +168,7 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 			this.readMoreLink.addClass("cd-read-more");
 		}
 	}
-	
+
 	/**
 	 * Gets the span for where the date displays
 	 *
@@ -182,7 +183,7 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 		}
 		return spanText;
 	}
-	
+
 	/**
 	 * Sets the span for where the date displays
 	 *
@@ -196,5 +197,49 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 		{
 			this.spanText.addClass("cd-date");
 		}
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof VerticalTimelineContent))
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+
+		VerticalTimelineContent that = (VerticalTimelineContent) o;
+
+		if (!getHeader().equals(that.getHeader()))
+		{
+			return false;
+		}
+		if (!getText().equals(that.getText()))
+		{
+			return false;
+		}
+		if (!getReadMoreLink().equals(that.getReadMoreLink()))
+		{
+			return false;
+		}
+		return getSpanText().equals(that.getSpanText());
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + getHeader().hashCode();
+		result = 31 * result + getText().hashCode();
+		result = 31 * result + getReadMoreLink().hashCode();
+		result = 31 * result + getSpanText().hashCode();
+		return result;
 	}
 }
