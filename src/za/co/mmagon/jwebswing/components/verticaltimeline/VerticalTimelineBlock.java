@@ -23,6 +23,10 @@ import za.co.mmagon.jwebswing.base.html.interfaces.GlobalChildren;
 import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
 import za.co.mmagon.jwebswing.base.html.interfaces.events.GlobalEvents;
 
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.List;
+
 /**
  * A content div for the vertical Timeline
  *
@@ -152,7 +156,9 @@ public class VerticalTimelineBlock extends Div<GlobalChildren, NoAttributes, Glo
 		if (imageContainer != null)
 		{
 			imageContainer.addClass("cd-timeline-img");
-			add(0, this.imageContainer);
+			List list = new ArrayList(getChildren());
+			list.add(0, this.imageContainer);
+			setChildren(new LinkedHashSet<>(list));
 		}
 	}
 
