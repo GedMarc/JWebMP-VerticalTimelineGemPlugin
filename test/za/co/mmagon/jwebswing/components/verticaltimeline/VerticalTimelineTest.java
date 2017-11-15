@@ -78,6 +78,7 @@ public class VerticalTimelineTest extends BaseTestClass
 	}
 	
 	@Test
+	@SuppressWarnings("unchecked")
 	public void testReferences()
 	{
 		Page p = getInstance();

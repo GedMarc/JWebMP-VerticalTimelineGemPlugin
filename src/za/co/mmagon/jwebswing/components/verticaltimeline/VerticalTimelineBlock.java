@@ -149,6 +149,7 @@ public class VerticalTimelineBlock extends Div<GlobalChildren, NoAttributes, Glo
 	 * @param imageContainer
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public void setImageContainer(Div imageContainer)
 	{
 		remove(this.imageContainer);
@@ -184,20 +185,12 @@ public class VerticalTimelineBlock extends Div<GlobalChildren, NoAttributes, Glo
 		{
 			return false;
 		}
-		if (!getContent().equals(that.getContent()))
-		{
-			return false;
-		}
-		return getImageContainer().equals(that.getImageContainer());
+		return getContent().equals(that.getContent()) && getImageContainer().equals(that.getImageContainer());
 	}
 
 	@Override
 	public int hashCode()
 	{
-		int result = super.hashCode();
-		result = 31 * result + getImageComponent().hashCode();
-		result = 31 * result + getContent().hashCode();
-		result = 31 * result + getImageContainer().hashCode();
-		return result;
+		return super.hashCode();
 	}
 }
