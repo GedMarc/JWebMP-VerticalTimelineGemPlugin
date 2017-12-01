@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -235,11 +235,6 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 	@Override
 	public int hashCode()
 	{
-		int result = super.hashCode();
-		result = 31 * result + getHeader().hashCode();
-		result = 31 * result + getText().hashCode();
-		result = 31 * result + getReadMoreLink().hashCode();
-		result = 31 * result + getSpanText().hashCode();
-		return result;
+		return super.hashCode();
 	}
 }
