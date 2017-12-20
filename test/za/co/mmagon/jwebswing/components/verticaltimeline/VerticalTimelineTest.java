@@ -62,19 +62,19 @@ public class VerticalTimelineTest extends BaseTestClass
 
 		System.out.println(vt.toString(true));
 		Assertions.assertEquals("<section class=\"verticalTimeline cd-container\" id=\"id\">\n"
-				                    + "	<div class=\"cd-timeline-block\" id=\"vtbId\">\n"
+				                        + "	<div class=\"cd-timeline-block\" id=\"vtbId\">\n"
 //				                    + "		<div class=\"cd-timeline-img\" id=\"vtbImageID\">\n"
 //				                    + "			<i class=\"fa fa-cog\"></i>\n"
 //				                    + "		</div>\n"
-				                    + "		<div class=\"cd-timeline-img\" id=\"vtbImageID\"></div>\n"
-				                    + "		<div class=\"cd-timeline-content\" id=\"content\">\n"
+				                        + "		<div class=\"cd-timeline-img\" id=\"vtbImageID\"></div>\n"
+				                        + "		<div class=\"cd-timeline-content\" id=\"content\">\n"
 				                        + "			<H2 id=\"headerID\">header text</H2>\n"
-				                    + "			<p id=\"textID\">paragraph text</p>\n"
-				                    + "			<a class=\"cd-read-more\" id=\"readmoreID\"></a>\n"
-				                    + "			<span class=\"cd-date\" id=\"spanID\">span text</span>\n"
-				                    + "		</div>\n"
-				                    + "	</div>\n"
-				                    + "</section>", vt.toString(true));
+				                        + "			<p id=\"textID\">paragraph text</p>\n"
+				                        + "			<a class=\"cd-read-more\" id=\"readmoreID\"></a>\n"
+				                        + "			<span class=\"cd-date\" id=\"spanID\">span text</span>\n"
+				                        + "		</div>\n"
+				                        + "	</div>\n"
+				                        + "</section>", vt.toString(true));
 	}
 
 	@Test
@@ -130,7 +130,6 @@ public class VerticalTimelineTest extends BaseTestClass
 				                        "\t\t<script src=\"bower_components/jquery-migrate/jquery-migrate.min.js\" type=\"text/javascript\"></script>\n" +
 				                        "\t\t<!-- Priority [Third] Values -->\n" +
 				                        "\t\t<script src=\"bower_components/bootstrap/dist/js/bootstrap.min.js\" type=\"text/javascript\"></script>\n" +
-				                        "\t\t<script src=\"bower_components/bootstrap-validator/dist/validator.js\" type=\"text/javascript\"></script>\n" +
 				                        "\t\t<!-- Priority [DontCare] Values -->\n" +
 				                        "\t\t<script src=\"bower_components/vertical-timeline-jwebswing/js/main.js\" type=\"text/javascript\"></script>\n" +
 				                        "\t</body>\n" +
