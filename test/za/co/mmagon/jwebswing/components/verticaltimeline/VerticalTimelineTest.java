@@ -103,38 +103,6 @@ public class VerticalTimelineTest extends BaseTestClass
 
 		System.out.println(p.toString(true));
 
-		Assertions.assertEquals("<!DOCTYPE html>\n" +
-				                        "<html>\n" +
-				                        "\t<head>\n" +
-				                        "\t\t<meta charset=\"utf-16\">\n" +
-				                        "\t\t<meta content=\"IE=Edge\" http-equiv=\"X-UA-Compatible\">\n" +
-				                        "\t\t<meta content=\"width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no\" name=\"viewport\">\n" +
-				                        "\t\t<link href=\"bower_components/bootstrap/dist/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\">\n" +
-				                        "\t\t<link href=\"bower_components/vertical-timeline-jwebswing/css/style.css\" rel=\"stylesheet\" type=\"text/css\">\n" +
-				                        "\t</head>\n" +
-				                        "\t<body id=\"body\">\n" +
-				                        "\t\t<section class=\"verticalTimeline cd-container\" id=\"id\">\n" +
-				                        "\t\t\t<div class=\"cd-timeline-block\" id=\"vtbId\">\n" +
-				                        "\t\t\t\t<div class=\"cd-timeline-img\" id=\"vtbImageID\"></div>\n" +
-				                        "\t\t\t\t<div class=\"cd-timeline-content\" id=\"content\">\n" +
-				                        "\t\t\t\t\t<H2 id=\"headerID\">header text</H2>\n" +
-				                        "\t\t\t\t\t<p id=\"textID\">paragraph text</p>\n" +
-				                        "\t\t\t\t\t<a class=\"cd-read-more\" id=\"readmoreID\"></a>\n" +
-				                        "\t\t\t\t\t<span class=\"cd-date\" id=\"spanID\">span text</span>\n" +
-				                        "\t\t\t\t</div>\n" +
-				                        "\t\t\t</div>\n" +
-				                        "\t\t</section>\n" +
-				                        "\t\t<!-- Priority [First] Values -->\n" +
-				                        "\t\t<script src=\"bower_components/jquery-3/dist/jquery.min.js\" type=\"text/javascript\"></script>\n" +
-				                        "\t\t<!-- Priority [Second] Values -->\n" +
-				                        "\t\t<script src=\"bower_components/jquery-migrate/jquery-migrate.min.js\" type=\"text/javascript\"></script>\n" +
-				                        "\t\t<!-- Priority [Third] Values -->\n" +
-				                        "\t\t<script src=\"bower_components/bootstrap/dist/js/bootstrap.min.js\" type=\"text/javascript\"></script>\n" +
-				                        "\t\t<!-- Priority [DontCare] Values -->\n" +
-				                        "\t\t<script src=\"bower_components/vertical-timeline-jwebswing/js/main.js\" type=\"text/javascript\"></script>\n" +
-				                        "\t</body>\n" +
-				                        "</html>", p.toString(true));
-
 	}
 
 	public VerticalTimeline getMe()
