@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -17,7 +17,6 @@
 package za.co.mmagon.jwebswing.components.verticaltimeline;
 
 import za.co.mmagon.jwebswing.base.html.Div;
-import za.co.mmagon.jwebswing.plugins.bootstrap.BootstrapPageConfigurator;
 
 /**
  * An implementation of the Responsive Vertical Timeline - https://codyhouse.co/gem/vertical-timeline/
@@ -43,7 +42,6 @@ public class VerticalTimeline extends Div<VerticalTimelineChildren, VerticalTime
 		setTag("section");
 		addClass("verticalTimeline");
 		addClass("cd-container");
-		getProperties().put(BootstrapPageConfigurator.BootstrapEnabledString, "true");
 	}
 
 	/**
