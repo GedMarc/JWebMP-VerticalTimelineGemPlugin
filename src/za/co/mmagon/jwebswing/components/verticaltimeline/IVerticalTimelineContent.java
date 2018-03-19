@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,6 @@ package za.co.mmagon.jwebswing.components.verticaltimeline;
 
 import za.co.mmagon.jwebswing.base.html.H2;
 import za.co.mmagon.jwebswing.base.html.Link;
-import za.co.mmagon.jwebswing.base.html.Paragraph;
 import za.co.mmagon.jwebswing.base.html.Span;
 
 /**
@@ -27,70 +26,54 @@ import za.co.mmagon.jwebswing.base.html.Span;
  */
 public interface IVerticalTimelineContent
 {
-	
+
 	/**
 	 * Returns the header object
 	 *
 	 * @return
 	 */
 	H2 getHeader();
-	
+
 	/**
 	 * Sets the header object
 	 *
 	 * @param header
 	 */
 	void setHeader(H2 header);
-	
+
 	/**
 	 * The link for the read more
 	 *
 	 * @return
 	 */
 	Link getReadMoreLink();
-	
+
 	/**
 	 * Sets the read more link
 	 *
 	 * @param readMoreLink
 	 */
 	void setReadMoreLink(Link readMoreLink);
-	
+
 	/**
 	 * Gets the span for where the date displays
 	 *
 	 * @return
 	 */
 	Span getSpanText();
-	
+
 	/**
 	 * Sets the span for where the date displays
 	 *
 	 * @param spanText
 	 */
 	void setSpanText(Span spanText);
-	
+
 	/**
 	 * Returns the text object
 	 *
 	 * @return
 	 */
-	Paragraph getText();
-	
-	/**
-	 * Sets the text object
-	 *
-	 * @param text
-	 */
-	void setText(Paragraph text);
-	
-	/**
-	 * Changes the default action of set text to the correct way for the time-line
-	 *
-	 * @param text the text to apply
-	 *
-	 * @return this
-	 */
-	VerticalTimelineContent setText(String text);
-	
+	String getText();
+
 }

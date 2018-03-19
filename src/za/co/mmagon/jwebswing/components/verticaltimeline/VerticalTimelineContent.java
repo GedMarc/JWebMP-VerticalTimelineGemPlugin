@@ -16,7 +16,10 @@
  */
 package za.co.mmagon.jwebswing.components.verticaltimeline;
 
-import za.co.mmagon.jwebswing.base.html.*;
+import za.co.mmagon.jwebswing.base.html.Div;
+import za.co.mmagon.jwebswing.base.html.H2;
+import za.co.mmagon.jwebswing.base.html.Link;
+import za.co.mmagon.jwebswing.base.html.Span;
 import za.co.mmagon.jwebswing.base.html.attributes.NoAttributes;
 import za.co.mmagon.jwebswing.base.html.interfaces.GlobalChildren;
 import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
@@ -28,7 +31,9 @@ import za.co.mmagon.jwebswing.base.html.interfaces.events.GlobalEvents;
  * @author GedMarc
  * @since Oct 24, 2016
  */
-public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, VerticalTimelineContent> implements IVerticalTimelineContent
+public class VerticalTimelineContent
+		extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, VerticalTimelineContent>
+		implements IVerticalTimelineContent
 {
 	private static final long serialVersionUID = 1L;
 	/**
@@ -38,7 +43,7 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 	/**
 	 * The actual text for the block
 	 */
-	private Paragraph text;
+	private String text;
 	/**
 	 * The link for the read more text
 	 */
@@ -84,7 +89,7 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 	@Override
 	public H2 getHeader()
 	{
-		if (this.header == null)
+		if (header == null)
 		{
 			setHeader(new H2(""));
 		}
@@ -100,43 +105,6 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 	public void setHeader(H2 header)
 	{
 		this.header = header;
-	}
-
-	/**
-	 * Returns the text object
-	 *
-	 * @return
-	 */
-	@Override
-	public Paragraph getText()
-	{
-		return text;
-	}
-
-	/**
-	 * Sets the text object
-	 *
-	 * @param text
-	 */
-	@Override
-	public void setText(Paragraph text)
-	{
-		this.text = text;
-	}
-
-	/**
-	 * Changes the default action of set text to the correct way for the time-line
-	 *
-	 * @param text
-	 * 		the text to apply
-	 *
-	 * @return this
-	 */
-	@Override
-	public VerticalTimelineContent setText(String text)
-	{
-		setText(new Paragraph(text));
-		return this;
 	}
 
 	/**
@@ -199,37 +167,26 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 		}
 	}
 
+	/**
+	 * Returns the text object
+	 *
+	 * @return
+	 */
+	@Override
+	public String getText()
+	{
+		return text;
+	}
+
+	public void setContentText(String text)
+	{
+		this.text = text;
+	}
+
 	@Override
 	public boolean equals(Object o)
 	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (!(o instanceof VerticalTimelineContent))
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-
-		VerticalTimelineContent that = (VerticalTimelineContent) o;
-
-		if (!getHeader().equals(that.getHeader()))
-		{
-			return false;
-		}
-		if (!getText().equals(that.getText()))
-		{
-			return false;
-		}
-		if (!getReadMoreLink().equals(that.getReadMoreLink()))
-		{
-			return false;
-		}
-		return getSpanText().equals(that.getSpanText());
+		return super.equals(o);
 	}
 
 	@Override
@@ -237,4 +194,6 @@ public class VerticalTimelineContent extends Div<GlobalChildren, NoAttributes, G
 	{
 		return super.hashCode();
 	}
+
+
 }
