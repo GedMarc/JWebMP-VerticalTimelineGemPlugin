@@ -26,7 +26,8 @@ import za.co.mmagon.jwebswing.base.html.Span;
 /**
  * @author GedMarc
  */
-public class VerticalTimelineTest extends BaseTestClass
+public class VerticalTimelineTest
+		extends BaseTestClass
 {
 
 	public VerticalTimelineTest()
@@ -41,40 +42,54 @@ public class VerticalTimelineTest extends BaseTestClass
 		Assertions.assertEquals("<section class=\"verticalTimeline cd-container\" id=\"id\"></section>", vt.toString(true));
 	}
 
+	public VerticalTimeline getMe()
+	{
+		VerticalTimeline vt = new VerticalTimeline();
+		vt.setID("id");
+		return vt;
+	}
+
 	@Test
 	public void testDeepStructure()
 	{
 		VerticalTimeline vt = getMe();
 		VerticalTimelineBlock vtb = new VerticalTimelineBlock();
-		vtb.getImageContainer().setID("vtbImageID");
-		vtb.getContent().setID("content");
-		vtb.getContent().setHeader(new H2("header text"));
-		vtb.getContent().setText("paragraph text");
-		vtb.getContent().setSpanText(new Span("span text"));
+		vtb.getImageContainer()
+		   .setID("vtbImageID");
+		vtb.getContent()
+		   .setID("content");
+		vtb.getContent()
+		   .setHeader(new H2("header text"));
+		vtb.getContent()
+		   .setContentText("paragraph text");
+		vtb.getContent()
+		   .setSpanText(new Span("span text"));
 
 		vtb.setID("vtbId");
-		vtb.getContent().getHeader().setID("headerID");
-		vtb.getContent().asVerticalTimelineContent().getReadMoreLink().setID("readmoreID");
-		vtb.getContent().asVerticalTimelineContent().getSpanText().setID("spanID");
-		vtb.getContent().asVerticalTimelineContent().getHeader().setID("headerID");
-		vtb.getContent().asVerticalTimelineContent().getText().setID("textID");
+		vtb.getContent()
+		   .getHeader()
+		   .setID("headerID");
+		vtb.getContent()
+		   .asVerticalTimelineContent()
+		   .getReadMoreLink()
+		   .setID("readmoreID");
+		vtb.getContent()
+		   .asVerticalTimelineContent()
+		   .getSpanText()
+		   .setID("spanID");
+		vtb.getContent()
+		   .asVerticalTimelineContent()
+		   .getHeader()
+		   .setID("headerID");
 		vt.add(vtb);
 
 		System.out.println(vt.toString(true));
-		Assertions.assertEquals("<section class=\"verticalTimeline cd-container\" id=\"id\">\n"
-				                        + "	<div class=\"cd-timeline-block\" id=\"vtbId\">\n"
-//				                    + "		<div class=\"cd-timeline-img\" id=\"vtbImageID\">\n"
-//				                    + "			<i class=\"fa fa-cog\"></i>\n"
-//				                    + "		</div>\n"
-				                        + "		<div class=\"cd-timeline-img\" id=\"vtbImageID\"></div>\n"
-				                        + "		<div class=\"cd-timeline-content\" id=\"content\">\n"
-				                        + "			<H2 id=\"headerID\">header text</H2>\n"
-				                        + "			<p id=\"textID\">paragraph text</p>\n"
-				                        + "			<a class=\"cd-read-more\" id=\"readmoreID\"></a>\n"
-				                        + "			<span class=\"cd-date\" id=\"spanID\">span text</span>\n"
-				                        + "		</div>\n"
-				                        + "	</div>\n"
-				                        + "</section>", vt.toString(true));
+		Assertions.assertEquals("<section class=\"verticalTimeline cd-container\" id=\"id\">\n" + "	<div class=\"cd-timeline-block\" id=\"vtbId\">\n"
+				                        //				                    + "		<div class=\"cd-timeline-img\" id=\"vtbImageID\">\n"
+				                        //				                    + "			<i class=\"fa fa-cog\"></i>\n"
+				                        //				                    + "		</div>\n"
+				                        + "		<div class=\"cd-timeline-img\" id=\"vtbImageID\"></div>\n" + "		<div class=\"cd-timeline-content\" id=\"content\">\n" + "			<H2 id=\"headerID\">header text</H2>\n" + "			<p id=\"textID\">paragraph text</p>\n" + "			<a class=\"cd-read-more\" id=\"readmoreID\"></a>\n" + "			<span class=\"cd-date\" id=\"spanID\">span text</span>\n" + "		</div>\n" + "	</div>\n" + "</section>",
+		                        vt.toString(true));
 	}
 
 	@Test
@@ -85,31 +100,40 @@ public class VerticalTimelineTest extends BaseTestClass
 
 		VerticalTimeline vt = getMe();
 		VerticalTimelineBlock vtb = new VerticalTimelineBlock();
-		vtb.getImageContainer().setID("vtbImageID");
-		vtb.getContent().setID("content");
-		vtb.getContent().setHeader(new H2("header text"));
-		vtb.getContent().setText("paragraph text");
-		vtb.getContent().setSpanText(new Span("span text"));
+		vtb.getImageContainer()
+		   .setID("vtbImageID");
+		vtb.getContent()
+		   .setID("content");
+		vtb.getContent()
+		   .setHeader(new H2("header text"));
+		vtb.getContent()
+		   .setContentText("paragraph text");
+		vtb.getContent()
+		   .setSpanText(new Span("span text"));
 
 		vtb.setID("vtbId");
-		vtb.getContent().getHeader().setID("headerID");
-		vtb.getContent().asVerticalTimelineContent().getReadMoreLink().setID("readmoreID");
-		vtb.getContent().asVerticalTimelineContent().getSpanText().setID("spanID");
-		vtb.getContent().asVerticalTimelineContent().getHeader().setID("headerID");
-		vtb.getContent().asVerticalTimelineContent().getText().setID("textID");
+		vtb.getContent()
+		   .getHeader()
+		   .setID("headerID");
+		vtb.getContent()
+		   .asVerticalTimelineContent()
+		   .getReadMoreLink()
+		   .setID("readmoreID");
+		vtb.getContent()
+		   .asVerticalTimelineContent()
+		   .getSpanText()
+		   .setID("spanID");
+		vtb.getContent()
+		   .asVerticalTimelineContent()
+		   .getHeader()
+		   .setID("headerID");
 		vt.add(vtb);
 
-		p.getBody().add(vt);
+		p.getBody()
+		 .add(vt);
 
 		System.out.println(p.toString(true));
 
-	}
-
-	public VerticalTimeline getMe()
-	{
-		VerticalTimeline vt = new VerticalTimeline();
-		vt.setID("id");
-		return vt;
 	}
 
 }
