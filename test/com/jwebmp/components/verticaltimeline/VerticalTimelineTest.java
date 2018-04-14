@@ -14,14 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.verticaltimeline;
+package com.jwebmp.components.verticaltimeline;
 
+import com.jwebmp.BaseTestClass;
+import com.jwebmp.Page;
+import com.jwebmp.base.html.H2;
+import com.jwebmp.base.html.Span;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import za.co.mmagon.jwebswing.BaseTestClass;
-import za.co.mmagon.jwebswing.Page;
-import za.co.mmagon.jwebswing.base.html.H2;
-import za.co.mmagon.jwebswing.base.html.Span;
 
 /**
  * @author GedMarc

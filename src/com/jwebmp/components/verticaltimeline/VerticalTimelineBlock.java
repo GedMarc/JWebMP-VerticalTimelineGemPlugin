@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,14 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.verticaltimeline;
+package com.jwebmp.components.verticaltimeline;
 
-import za.co.mmagon.jwebswing.Component;
-import za.co.mmagon.jwebswing.base.html.Div;
-import za.co.mmagon.jwebswing.base.html.attributes.NoAttributes;
-import za.co.mmagon.jwebswing.base.html.interfaces.GlobalChildren;
-import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
-import za.co.mmagon.jwebswing.base.html.interfaces.events.GlobalEvents;
+import com.jwebmp.Component;
+import com.jwebmp.base.html.Div;
+import com.jwebmp.base.html.attributes.NoAttributes;
+import com.jwebmp.base.html.interfaces.GlobalChildren;
+import com.jwebmp.base.html.interfaces.GlobalFeatures;
+import com.jwebmp.base.html.interfaces.events.GlobalEvents;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
@@ -55,14 +55,6 @@ public class VerticalTimelineBlock extends Div<GlobalChildren, NoAttributes, Glo
 	private Div imageContainer;
 
 	/**
-	 * Constructs a new instance of the vertical time-line block
-	 */
-	public VerticalTimelineBlock()
-	{
-		addClass("cd-timeline-block");
-	}
-
-	/**
 	 * Constructs a new time-line block with the given image component
 	 *
 	 * @param imageComponent
@@ -75,26 +67,42 @@ public class VerticalTimelineBlock extends Div<GlobalChildren, NoAttributes, Glo
 	}
 
 	/**
-	 * Returns this image component.
-	 * May return null
-	 *
-	 * @return
+	 * Constructs a new instance of the vertical time-line block
 	 */
-	@Override
-	public Component getImageComponent()
+	public VerticalTimelineBlock()
 	{
-		return imageComponent;
+		addClass("cd-timeline-block");
 	}
 
-	/**
-	 * Sets this image component
-	 *
-	 * @param imageComponent
-	 */
 	@Override
-	public final void setImageComponent(Component imageComponent)
+	public boolean equals(Object o)
 	{
-		this.imageComponent = imageComponent;
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof VerticalTimelineBlock))
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+
+		VerticalTimelineBlock that = (VerticalTimelineBlock) o;
+
+		if (!getImageComponent().equals(that.getImageComponent()))
+		{
+			return false;
+		}
+		return getContent().equals(that.getContent()) && getImageContainer().equals(that.getImageContainer());
+	}
+
+	@Override
+	public int hashCode()
+	{
+		return super.hashCode();
 	}
 
 	/**
@@ -126,6 +134,29 @@ public class VerticalTimelineBlock extends Div<GlobalChildren, NoAttributes, Glo
 		{
 			add(this.content);
 		}
+	}
+
+	/**
+	 * Returns this image component.
+	 * May return null
+	 *
+	 * @return
+	 */
+	@Override
+	public Component getImageComponent()
+	{
+		return imageComponent;
+	}
+
+	/**
+	 * Sets this image component
+	 *
+	 * @param imageComponent
+	 */
+	@Override
+	public final void setImageComponent(Component imageComponent)
+	{
+		this.imageComponent = imageComponent;
 	}
 
 	/**
@@ -161,36 +192,5 @@ public class VerticalTimelineBlock extends Div<GlobalChildren, NoAttributes, Glo
 			list.add(0, this.imageContainer);
 			setChildren(new LinkedHashSet<>(list));
 		}
-	}
-
-	@Override
-	public boolean equals(Object o)
-	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (!(o instanceof VerticalTimelineBlock))
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-
-		VerticalTimelineBlock that = (VerticalTimelineBlock) o;
-
-		if (!getImageComponent().equals(that.getImageComponent()))
-		{
-			return false;
-		}
-		return getContent().equals(that.getContent()) && getImageContainer().equals(that.getImageContainer());
-	}
-
-	@Override
-	public int hashCode()
-	{
-		return super.hashCode();
 	}
 }

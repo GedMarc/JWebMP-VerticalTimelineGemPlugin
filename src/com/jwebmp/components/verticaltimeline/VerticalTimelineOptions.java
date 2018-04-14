@@ -14,39 +14,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.verticaltimeline;
+package com.jwebmp.components.verticaltimeline;
 
-import za.co.mmagon.jwebswing.base.html.interfaces.AttributeDefinitions;
-import za.co.mmagon.jwebswing.utilities.StaticStrings;
-
-import static za.co.mmagon.jwebswing.utilities.StaticStrings.CHAR_DASH;
+import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
 
 /**
+ * All the options for the tooltip library
+ * <p>
+ *
  * @author GedMarc
+ * @version 1.0
+ * 		<p>
+ * 		<p>
+ * @since Mar 4, 2015
  */
-public enum VerticalTimelineAttributes implements AttributeDefinitions
+public class VerticalTimelineOptions extends JavaScriptPart
 {
-	Visibility;
 
-	VerticalTimelineAttributes()
+	private static final long serialVersionUID = 1L;
+
+	public VerticalTimelineOptions()
 	{
+		//Nothing needed
 	}
 
-
-	@Override
-	public boolean isKeyword()
-	{
-		return false;
-	}
-
-	/**
-	 * Returns the attribute name replacing all underscores with dashes and all dollar signs to empty
-	 *
-	 * @return
-	 */
-	@Override
-	public String toString()
-	{
-		return name().toLowerCase().replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH).replace("$", "");
-	}
 }

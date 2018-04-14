@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.verticaltimeline;
+package com.jwebmp.components.verticaltimeline;
 
-import za.co.mmagon.jwebswing.Page;
-import za.co.mmagon.jwebswing.PageConfigurator;
-import za.co.mmagon.jwebswing.plugins.PluginInformation;
+import com.jwebmp.Page;
+import com.jwebmp.PageConfigurator;
+import com.jwebmp.plugins.PluginInformation;
 
 /**
  * @author GedMarc
@@ -41,13 +41,13 @@ import za.co.mmagon.jwebswing.plugins.PluginInformation;
 )
 public class VerticalTimelinePageConfigurator extends PageConfigurator
 {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Override
 	public Page configure(Page page)
 	{
 		return page;
 	}
-	
+
 }

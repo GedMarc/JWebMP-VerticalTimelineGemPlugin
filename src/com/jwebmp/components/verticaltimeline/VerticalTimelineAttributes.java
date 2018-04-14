@@ -14,16 +14,39 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.verticaltimeline;
+package com.jwebmp.components.verticaltimeline;
 
-import za.co.mmagon.jwebswing.base.html.interfaces.events.GlobalEvents;
+import com.jwebmp.base.html.interfaces.AttributeDefinitions;
+import com.jwebmp.utilities.StaticStrings;
+
+import static com.jwebmp.utilities.StaticStrings.CHAR_DASH;
 
 /**
- * @author Marc Magon
- * @version 1.0
- * @since 07 Aug 2015
+ * @author GedMarc
  */
-public interface VerticalTimelineEvents extends GlobalEvents
+public enum VerticalTimelineAttributes implements AttributeDefinitions
 {
+	Visibility;
 
+	VerticalTimelineAttributes()
+	{
+	}
+
+
+	@Override
+	public boolean isKeyword()
+	{
+		return false;
+	}
+
+	/**
+	 * Returns the attribute name replacing all underscores with dashes and all dollar signs to empty
+	 *
+	 * @return
+	 */
+	@Override
+	public String toString()
+	{
+		return name().toLowerCase().replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH).replace("$", "");
+	}
 }

@@ -14,16 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.verticaltimeline;
+package com.jwebmp.components.verticaltimeline;
 
-import za.co.mmagon.jwebswing.base.html.interfaces.GlobalChildren;
+import com.jwebmp.base.html.interfaces.events.GlobalEvents;
 
 /**
  * @author Marc Magon
  * @version 1.0
  * @since 07 Aug 2015
  */
-public interface VerticalTimelineChildren extends GlobalChildren
+public interface VerticalTimelineEvents extends GlobalEvents
 {
 
 }

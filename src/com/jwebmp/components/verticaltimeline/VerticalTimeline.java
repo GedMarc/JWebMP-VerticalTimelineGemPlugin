@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.verticaltimeline;
+package com.jwebmp.components.verticaltimeline;
 
-import za.co.mmagon.jwebswing.base.html.Div;
+import com.jwebmp.base.html.Div;
 
 /**
  * An implementation of the Responsive Vertical Timeline - https://codyhouse.co/gem/vertical-timeline/
@@ -44,6 +44,15 @@ public class VerticalTimeline extends Div<VerticalTimelineChildren, VerticalTime
 		addClass("cd-container");
 	}
 
+	public final VerticalTimelineFeature getFeature()
+	{
+		if (feature == null)
+		{
+			feature = new VerticalTimelineFeature(this);
+		}
+		return feature;
+	}
+
 	/**
 	 * Returns the vertical time line with only the fields relevant
 	 *
@@ -52,15 +61,6 @@ public class VerticalTimeline extends Div<VerticalTimelineChildren, VerticalTime
 	public VerticalTimeline asVerticalTimeline()
 	{
 		return this;
-	}
-
-	public final VerticalTimelineFeature getFeature()
-	{
-		if (feature == null)
-		{
-			feature = new VerticalTimelineFeature(this);
-		}
-		return feature;
 	}
 
 	@Override
