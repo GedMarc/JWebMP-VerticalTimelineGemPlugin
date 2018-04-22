@@ -16,7 +16,6 @@
  */
 package com.jwebmp.components.verticaltimeline;
 
-import com.jwebmp.BaseTestClass;
 import com.jwebmp.Page;
 import com.jwebmp.base.html.H2;
 import com.jwebmp.base.html.Span;
@@ -27,7 +26,7 @@ import org.junit.jupiter.api.Test;
  * @author GedMarc
  */
 public class VerticalTimelineTest
-		extends BaseTestClass
+
 {
 
 	public VerticalTimelineTest()
@@ -90,7 +89,7 @@ public class VerticalTimelineTest
 	@SuppressWarnings("unchecked")
 	public void testReferences()
 	{
-		Page p = getInstance();
+		Page p = new Page();
 
 		VerticalTimeline vt = getMe();
 		VerticalTimelineBlock vtb = new VerticalTimelineBlock();
