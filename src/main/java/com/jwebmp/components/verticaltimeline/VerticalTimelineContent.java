@@ -195,5 +195,4 @@ public class VerticalTimelineContent
 		return super.hashCode();
 	}
 
-
 }

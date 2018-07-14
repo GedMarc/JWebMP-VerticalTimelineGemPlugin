@@ -16,37 +16,15 @@
  */
 package com.jwebmp.components.verticaltimeline;
 
-import com.jwebmp.base.html.interfaces.AttributeDefinitions;
-import com.jwebmp.utilities.StaticStrings;
-
-import static com.jwebmp.utilities.StaticStrings.CHAR_DASH;
+import com.jwebmp.base.html.interfaces.events.GlobalEvents;
 
 /**
- * @author GedMarc
+ * @author Marc Magon
+ * @version 1.0
+ * @since 07 Aug 2015
  */
-public enum VerticalTimelineAttributes implements AttributeDefinitions
+public interface VerticalTimelineEvents
+		extends GlobalEvents
 {
-	Visibility;
 
-	VerticalTimelineAttributes()
-	{
-	}
-
-
-	@Override
-	public boolean isKeyword()
-	{
-		return false;
-	}
-
-	/**
-	 * Returns the attribute name replacing all underscores with dashes and all dollar signs to empty
-	 *
-	 * @return
-	 */
-	@Override
-	public String toString()
-	{
-		return name().toLowerCase().replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH).replace("$", "");
-	}
 }

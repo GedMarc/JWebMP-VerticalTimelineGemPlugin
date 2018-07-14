@@ -16,14 +16,15 @@
  */
 package com.jwebmp.components.verticaltimeline;
 
-import com.jwebmp.base.html.interfaces.events.GlobalEvents;
+import com.jwebmp.base.html.interfaces.GlobalChildren;
 
 /**
  * @author Marc Magon
  * @version 1.0
  * @since 07 Aug 2015
  */
-public interface VerticalTimelineEvents extends GlobalEvents
+public interface VerticalTimelineChildren
+		extends GlobalChildren
 {
 
 }

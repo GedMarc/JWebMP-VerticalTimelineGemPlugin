@@ -23,7 +23,8 @@ import com.jwebmp.base.html.interfaces.GlobalFeatures;
  * @version 1.0
  * @since 07 Aug 2015
  */
-public interface VerticalTimelineFeatures extends GlobalFeatures
+public interface VerticalTimelineFeatures
+		extends GlobalFeatures
 {
 
 }

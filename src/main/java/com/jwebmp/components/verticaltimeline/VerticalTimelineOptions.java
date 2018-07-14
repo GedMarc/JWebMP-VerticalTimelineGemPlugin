@@ -16,14 +16,27 @@
  */
 package com.jwebmp.components.verticaltimeline;
 
-import com.jwebmp.base.html.interfaces.GlobalChildren;
+import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
 
 /**
- * @author Marc Magon
+ * All the options for the tooltip library
+ * <p>
+ *
+ * @author GedMarc
  * @version 1.0
- * @since 07 Aug 2015
+ * 		<p>
+ * 		<p>
+ * @since Mar 4, 2015
  */
-public interface VerticalTimelineChildren extends GlobalChildren
+public class VerticalTimelineOptions
+		extends JavaScriptPart
 {
+
+	private static final long serialVersionUID = 1L;
+
+	public VerticalTimelineOptions()
+	{
+		//Nothing needed
+	}
 
 }

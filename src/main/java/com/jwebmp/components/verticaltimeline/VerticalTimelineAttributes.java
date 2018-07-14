@@ -16,26 +16,39 @@
  */
 package com.jwebmp.components.verticaltimeline;
 
-import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.base.html.interfaces.AttributeDefinitions;
+import com.jwebmp.utilities.StaticStrings;
+
+import static com.jwebmp.utilities.StaticStrings.*;
 
 /**
- * All the options for the tooltip library
- * <p>
- *
  * @author GedMarc
- * @version 1.0
- * 		<p>
- * 		<p>
- * @since Mar 4, 2015
  */
-public class VerticalTimelineOptions extends JavaScriptPart
+public enum VerticalTimelineAttributes
+		implements AttributeDefinitions
 {
+	Visibility;
 
-	private static final long serialVersionUID = 1L;
-
-	public VerticalTimelineOptions()
+	VerticalTimelineAttributes()
 	{
-		//Nothing needed
 	}
 
+	@Override
+	public boolean isKeyword()
+	{
+		return false;
+	}
+
+	/**
+	 * Returns the attribute name replacing all underscores with dashes and all dollar signs to empty
+	 *
+	 * @return
+	 */
+	@Override
+	public String toString()
+	{
+		return name().toLowerCase()
+		             .replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH)
+		             .replace("$", "");
+	}
 }

@@ -27,7 +27,8 @@ import com.jwebmp.base.html.Div;
  * @version 1.0
  * @since 24 October 2016
  */
-public class VerticalTimeline extends Div<VerticalTimelineChildren, VerticalTimelineAttributes, VerticalTimelineFeatures, VerticalTimelineEvents, VerticalTimeline>
+public class VerticalTimeline
+		extends Div<VerticalTimelineChildren, VerticalTimelineAttributes, VerticalTimelineFeatures, VerticalTimelineEvents, VerticalTimeline>
 {
 
 	private static final long serialVersionUID = 1L;

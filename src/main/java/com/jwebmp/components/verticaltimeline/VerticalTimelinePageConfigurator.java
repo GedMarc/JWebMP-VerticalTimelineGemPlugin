@@ -39,7 +39,8 @@ import com.jwebmp.plugins.PluginInformation;
 		pluginIconImageUrl = "bower_components/vertical-timeline-jwebswing/example.png",
 		pluginLastUpdatedDate = "2017/03/04"
 )
-public class VerticalTimelinePageConfigurator extends PageConfigurator
+public class VerticalTimelinePageConfigurator
+		extends PageConfigurator
 {
 
 	private static final long serialVersionUID = 1L;

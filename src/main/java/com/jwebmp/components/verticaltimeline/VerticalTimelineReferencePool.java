@@ -26,7 +26,8 @@ import com.jwebmp.base.servlets.interfaces.ReferencePool;
  * @author GedMarc
  * @since 24 Oct 2016
  */
-public enum VerticalTimelineReferencePool implements ReferencePool
+public enum VerticalTimelineReferencePool
+		implements ReferencePool
 {
 	VerticalTimelineReference(new JavascriptReference("ResponsiveVerticalTimeline", 1.0, "bower_components/vertical-timeline-jwebswing/js/main.js"),
 	                          new CSSReference("ResponsiveVerticalTimelineCSS", 1.0, "bower_components/vertical-timeline-jwebswing/css/style.css"));

@@ -33,7 +33,8 @@ import java.util.List;
  * @author GedMarc
  * @since Oct 24, 2016
  */
-public class VerticalTimelineBlock extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, VerticalTimelineBlock>
+public class VerticalTimelineBlock
+		extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, VerticalTimelineBlock>
 		implements VerticalTimelineChildren, IVerticalTimelineBlock
 {
 
