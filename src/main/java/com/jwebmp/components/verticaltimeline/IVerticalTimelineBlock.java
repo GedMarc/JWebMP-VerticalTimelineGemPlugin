@@ -16,8 +16,8 @@
  */
 package com.jwebmp.components.verticaltimeline;
 
-import com.jwebmp.Component;
-import com.jwebmp.base.html.Div;
+import com.jwebmp.core.Component;
+import com.jwebmp.core.base.html.Div;
 
 /**
  * @author GedMarc

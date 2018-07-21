@@ -16,9 +16,9 @@
  */
 package com.jwebmp.components.verticaltimeline;
 
-import com.jwebmp.Page;
-import com.jwebmp.base.html.H2;
-import com.jwebmp.base.html.Span;
+import com.jwebmp.core.Page;
+import com.jwebmp.core.base.html.H2;
+import com.jwebmp.core.base.html.Span;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

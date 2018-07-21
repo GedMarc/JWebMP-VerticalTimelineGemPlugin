@@ -16,7 +16,7 @@
  */
 package com.jwebmp.components.verticaltimeline;
 
-import com.jwebmp.base.html.Div;
+import com.jwebmp.core.base.html.Div;
 
 /**
  * An implementation of the Responsive Vertical Timeline - https://codyhouse.co/gem/vertical-timeline/
