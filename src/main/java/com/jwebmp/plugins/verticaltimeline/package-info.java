@@ -14,29 +14,4 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.verticaltimeline;
-
-import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
-
-/**
- * All the options for the tooltip library
- * <p>
- *
- * @author GedMarc
- * @version 1.0
- * 		<p>
- * 		<p>
- * @since Mar 4, 2015
- */
-public class VerticalTimelineOptions
-		extends JavaScriptPart
-{
-
-	private static final long serialVersionUID = 1L;
-
-	public VerticalTimelineOptions()
-	{
-		//Nothing needed
-	}
-
-}
+package com.jwebmp.plugins.verticaltimeline;

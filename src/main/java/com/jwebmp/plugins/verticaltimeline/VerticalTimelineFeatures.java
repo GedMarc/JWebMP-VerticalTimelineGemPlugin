@@ -14,4 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.verticaltimeline;
+package com.jwebmp.plugins.verticaltimeline;
+
+import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
+
+/**
+ * @author Marc Magon
+ * @version 1.0
+ * @since 07 Aug 2015
+ */
+public interface VerticalTimelineFeatures
+		extends GlobalFeatures
+{
+
+}

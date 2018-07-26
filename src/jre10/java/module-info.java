@@ -1,9 +1,9 @@
-import com.jwebmp.components.verticaltimeline.VerticalTimelinePageConfigurator;
+import com.jwebmp.plugins.verticaltimeline.VerticalTimelinePageConfigurator;
 import com.jwebmp.core.services.IPageConfigurator;
 
-module com.jwebmp.components.verticaltimeline {
+module com.jwebmp.plugins.verticaltimeline {
 
-	exports com.jwebmp.components.verticaltimeline;
+	exports com.jwebmp.plugins.verticaltimeline;
 
 	requires com.jwebmp.core;
 	requires com.jwebmp.logmaster;
@@ -13,5 +13,5 @@ module com.jwebmp.components.verticaltimeline {
 	requires java.logging;
 
 	provides IPageConfigurator with VerticalTimelinePageConfigurator;
-
+	opens com.jwebmp.plugins.verticaltimeline to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
