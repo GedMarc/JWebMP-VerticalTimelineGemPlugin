@@ -19,9 +19,9 @@ package com.jwebmp.plugins.verticaltimeline;
 import com.jwebmp.core.Component;
 import com.jwebmp.core.base.html.Div;
 import com.jwebmp.core.base.html.attributes.NoAttributes;
-import com.jwebmp.core.base.html.interfaces.GlobalChildren;
 import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
 import com.jwebmp.core.base.html.interfaces.events.GlobalEvents;
+import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
@@ -33,9 +33,9 @@ import java.util.List;
  * @author GedMarc
  * @since Oct 24, 2016
  */
-public class VerticalTimelineBlock
-		extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, VerticalTimelineBlock>
-		implements VerticalTimelineChildren, IVerticalTimelineBlock
+public class VerticalTimelineBlock<J extends VerticalTimelineBlock<J>>
+		extends Div<IComponentHierarchyBase, NoAttributes, GlobalFeatures, GlobalEvents, J>
+		implements VerticalTimelineChildren<IComponentHierarchyBase, J>, IVerticalTimelineBlock
 {
 
 	private static final long serialVersionUID = 1L;
@@ -76,6 +76,12 @@ public class VerticalTimelineBlock
 	}
 
 	@Override
+	public int hashCode()
+	{
+		return super.hashCode();
+	}
+
+	@Override
 	public boolean equals(Object o)
 	{
 		if (this == o)
@@ -98,12 +104,6 @@ public class VerticalTimelineBlock
 			return false;
 		}
 		return getContent().equals(that.getContent()) && getImageContainer().equals(that.getImageContainer());
-	}
-
-	@Override
-	public int hashCode()
-	{
-		return super.hashCode();
 	}
 
 	/**

@@ -71,31 +71,14 @@ public class VerticalTimeline
 	}
 
 	@Override
-	public boolean equals(Object o)
+	public int hashCode()
 	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (!(o instanceof VerticalTimeline))
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-
-		VerticalTimeline that = (VerticalTimeline) o;
-
-		return getFeature().equals(that.getFeature());
+		return super.hashCode();
 	}
 
 	@Override
-	public int hashCode()
+	public boolean equals(Object o)
 	{
-		int result = super.hashCode();
-		result = 31 * result + getFeature().hashCode();
-		return result;
+		return super.equals(o);
 	}
 }

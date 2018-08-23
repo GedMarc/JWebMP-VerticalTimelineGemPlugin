@@ -21,9 +21,9 @@ import com.jwebmp.core.base.html.H2;
 import com.jwebmp.core.base.html.Link;
 import com.jwebmp.core.base.html.Span;
 import com.jwebmp.core.base.html.attributes.NoAttributes;
-import com.jwebmp.core.base.html.interfaces.GlobalChildren;
 import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
 import com.jwebmp.core.base.html.interfaces.events.GlobalEvents;
+import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 
 /**
  * A content div for the vertical Timeline
@@ -32,7 +32,7 @@ import com.jwebmp.core.base.html.interfaces.events.GlobalEvents;
  * @since Oct 24, 2016
  */
 public class VerticalTimelineContent
-		extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, VerticalTimelineContent>
+		extends Div<IComponentHierarchyBase, NoAttributes, GlobalFeatures, GlobalEvents, VerticalTimelineContent>
 		implements IVerticalTimelineContent
 {
 	private static final long serialVersionUID = 1L;
@@ -184,15 +184,15 @@ public class VerticalTimelineContent
 	}
 
 	@Override
-	public boolean equals(Object o)
-	{
-		return super.equals(o);
-	}
-
-	@Override
 	public int hashCode()
 	{
 		return super.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		return super.equals(o);
 	}
 
 }
