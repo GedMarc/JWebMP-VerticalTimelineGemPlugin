@@ -33,8 +33,8 @@ import javax.validation.constraints.NotNull;
 		pluginCategories = "ui, web, colour picker, spectrum, drop down",
 		pluginSubtitle = "A straight forward and simple Responsive Vertical Timeline ",
 		pluginGitUrl = "https://codyhouse.co/gem/vertical-timeline/",
-		pluginSourceUrl = "https://github.com/GedMarc/JWebSwing-VerticalTimelineGemPlugin",
-		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-VerticalTimelineGemPluginwiki",
+		pluginSourceUrl = "https://github.com/GedMarc/JWebMP-VerticalTimelineGemPlugin",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-VerticalTimelineGemPluginwiki",
 		pluginOriginalHomepage = "https://codyhouse.co/gem/vertical-timeline/",
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/VerticalTimelineGemPlugin.jar/download",
 		pluginIconUrl = "bower_components/vertical-timeline-jwebswing/example.png",
@@ -42,7 +42,7 @@ import javax.validation.constraints.NotNull;
 		pluginLastUpdatedDate = "2017/03/04"
 )
 public class VerticalTimelinePageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<VerticalTimelinePageConfigurator>
 {
 	/**
 	 * If this configurator is enabled
