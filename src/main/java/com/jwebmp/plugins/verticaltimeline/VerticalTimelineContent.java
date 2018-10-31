@@ -35,7 +35,7 @@ public class VerticalTimelineContent
 		extends Div<IComponentHierarchyBase, NoAttributes, GlobalFeatures, GlobalEvents, VerticalTimelineContent>
 		implements IVerticalTimelineContent
 {
-	private static final long serialVersionUID = 1L;
+
 	/**
 	 * The header of the time-line block
 	 */

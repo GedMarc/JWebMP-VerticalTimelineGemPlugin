@@ -38,7 +38,6 @@ public class VerticalTimelineBlock<J extends VerticalTimelineBlock<J>>
 		implements VerticalTimelineChildren<IComponentHierarchyBase, J>, IVerticalTimelineBlock
 {
 
-	private static final long serialVersionUID = 1L;
 
 	/**
 	 * The component that will display the image

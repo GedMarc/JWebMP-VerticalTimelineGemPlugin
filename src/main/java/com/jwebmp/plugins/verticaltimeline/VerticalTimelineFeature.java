@@ -31,7 +31,6 @@ public class VerticalTimelineFeature
 		extends Feature<GlobalFeatures, VerticalTimelineOptions, VerticalTimelineFeature>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	private VerticalTimelineOptions options;
 

@@ -31,7 +31,7 @@ public class VerticalTimeline
 		extends Div<VerticalTimelineChildren, VerticalTimelineAttributes, VerticalTimelineFeatures, VerticalTimelineEvents, VerticalTimeline>
 {
 
-	private static final long serialVersionUID = 1L;
+
 	private VerticalTimelineFeature feature;
 
 	/**
