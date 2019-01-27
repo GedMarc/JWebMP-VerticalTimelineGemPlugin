@@ -1,9 +1,3 @@
-import com.jwebmp.core.services.IPageConfigurator;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
-import com.jwebmp.plugins.verticaltimeline.VerticalTimelinePageConfigurator;
-import com.jwebmp.plugins.verticaltimeline.implementations.VerticalTimelineExclusionsModule;
-
 module com.jwebmp.plugins.verticaltimeline {
 
 	exports com.jwebmp.plugins.verticaltimeline;
@@ -16,9 +10,9 @@ module com.jwebmp.plugins.verticaltimeline {
 	requires java.logging;
 	requires com.jwebmp.guicedinjection;
 
-	provides IPageConfigurator with VerticalTimelinePageConfigurator;
-	provides IGuiceScanModuleExclusions with VerticalTimelineExclusionsModule;
-	provides IGuiceScanJarExclusions with VerticalTimelineExclusionsModule;
+	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.verticaltimeline.VerticalTimelinePageConfigurator;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.verticaltimeline.implementations.VerticalTimelineExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.verticaltimeline.implementations.VerticalTimelineExclusionsModule;
 
 	opens com.jwebmp.plugins.verticaltimeline to com.fasterxml.jackson.databind, com.jwebmp.core;
 }
