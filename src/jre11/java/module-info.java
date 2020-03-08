@@ -12,7 +12,6 @@ module com.jwebmp.plugins.verticaltimeline {
 
 	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.verticaltimeline.VerticalTimelinePageConfigurator;
 	provides com.guicedee.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.verticaltimeline.implementations.VerticalTimelineExclusionsModule;
-	provides com.guicedee.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.verticaltimeline.implementations.VerticalTimelineExclusionsModule;
 
 	opens com.jwebmp.plugins.verticaltimeline to com.fasterxml.jackson.databind, com.jwebmp.core;
 }
