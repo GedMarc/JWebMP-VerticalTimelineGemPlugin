@@ -20,14 +20,14 @@ import com.jwebmp.core.Page;
 import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.services.IPageConfigurator;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * @author GedMarc
  */
 @PluginInformation(pluginName = "Vertical Timeline",
 		pluginUniqueName = "vertical-timeline",
-		pluginDescription = "We all are quite familiar with vertical timelines: all instant messaging applications use them. A current trend in web design is to use a similar structure, but to show a process rather than a sequence of events. That is why timeline-like structures are often used for the “How it works” page.",
+		pluginDescription = "We all are quite familiar with vertical timelines: all instant messaging applications use them. A current trend in web design is to use a similar structure, but to show a process rather than a sequence of events. That is why timeline-like structures are often used for the “How it works? page.",
 		pluginVersion = "1.0",
 		pluginDependancyUniqueIDs = "jquery,bootstrap,modernizr",
 		pluginCategories = "ui, web, colour picker, spectrum, drop down",
