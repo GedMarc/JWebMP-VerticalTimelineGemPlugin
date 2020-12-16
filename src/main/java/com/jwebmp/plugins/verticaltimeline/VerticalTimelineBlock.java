@@ -19,6 +19,7 @@ package com.jwebmp.plugins.verticaltimeline;
 import com.jwebmp.core.Component;
 import com.jwebmp.core.base.html.Div;
 import com.jwebmp.core.base.html.attributes.NoAttributes;
+import com.jwebmp.core.base.html.interfaces.GlobalChildren;
 import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
 import com.jwebmp.core.base.html.interfaces.events.GlobalEvents;
 import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
@@ -34,8 +35,8 @@ import java.util.List;
  * @since Oct 24, 2016
  */
 public class VerticalTimelineBlock<J extends VerticalTimelineBlock<J>>
-		extends Div<IComponentHierarchyBase, NoAttributes, GlobalFeatures, GlobalEvents, J>
-		implements VerticalTimelineChildren<IComponentHierarchyBase, J>, IVerticalTimelineBlock
+		extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, J>
+		implements VerticalTimelineChildren, IVerticalTimelineBlock
 {
 
 

@@ -39,7 +39,8 @@ import jakarta.validation.constraints.NotNull;
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/VerticalTimelineGemPlugin.jar/download",
 		pluginIconUrl = "bower_components/vertical-timeline-jwebswing/example.png",
 		pluginIconImageUrl = "bower_components/vertical-timeline-jwebswing/example.png",
-		pluginLastUpdatedDate = "2017/03/04"
+		pluginLastUpdatedDate = "2017/03/04",
+		pluginGroupId = ""
 )
 public class VerticalTimelinePageConfigurator
 		implements IPageConfigurator<VerticalTimelinePageConfigurator>
