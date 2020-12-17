@@ -89,7 +89,7 @@ public class VerticalTimelineTest
 	@SuppressWarnings("unchecked")
 	public void testReferences()
 	{
-		Page p = new Page();
+		Page<?> p = new Page();
 
 		VerticalTimeline vt = getMe();
 		VerticalTimelineBlock vtb = new VerticalTimelineBlock();
